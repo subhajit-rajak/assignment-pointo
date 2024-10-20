@@ -1,4 +1,4 @@
-package com.subhajitrajak.assignmentpointo
+package com.subhajitrajak.assignmentpointo.utils
 
 import android.content.Context
 import android.content.pm.PackageManager

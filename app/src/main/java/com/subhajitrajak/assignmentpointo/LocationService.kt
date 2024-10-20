@@ -75,7 +75,7 @@ class LocationService : Service() {
             .onEach { location ->
                 val latitude = location.latitude.toString()
                 val longitude = location.longitude.toString()
-                val updatedNotification = NotificationCompat.Builder(this, LocationService.CHANNEL_ID)
+                val updatedNotification = NotificationCompat.Builder(this, CHANNEL_ID)
                     .setContentTitle("Your current Location")
                     .setContentText("Latitude: $latitude\nLongitude: $longitude")
                     .setSmallIcon(R.mipmap.ic_launcher)
