@@ -97,13 +97,22 @@ class BluetoothActivity : AppCompatActivity() {
                     Manifest.permission.BLUETOOTH_SCAN
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
-
                 requestPermissions()
             }
+            Toast.makeText(
+                this,
+                "Scanning started",
+                Toast.LENGTH_SHORT
+            ).show()
             startScanning()
         }
 
         binding.stopScan.setOnClickListener {
+            Toast.makeText(
+                this,
+                "Scanning stopped",
+                Toast.LENGTH_SHORT
+            ).show()
             scanCallback?.let {
                 stopScanning(it)
             }

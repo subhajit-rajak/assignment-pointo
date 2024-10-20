@@ -5,28 +5,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark"
     tools:context=".activities.BluetoothActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Bluetooth Low Energy\nDevice Scanning"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/deviceName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name: "
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <TextView
         android:id="@+id/deviceAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address: "
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Services: "
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Characteristics: "
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,32 +72,34 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/stopScan"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_height="60dp"
         android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="@color/light"
         android:text="Stop Scanning"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="18dp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/dark" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/startScan"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="@color/light"
         android:text="Start Scanning"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="18dp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@id/stopScan"
         app:layout_constraintEnd_toEndOf="@id/stopScan"
-        app:layout_constraintStart_toStartOf="@id/stopScan" />
+        app:layout_constraintStart_toStartOf="@id/stopScan"
+        app:rippleColor="@color/dark" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -65,6 +65,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.stop.setOnClickListener {
+            Toast.makeText(
+                this,
+                "Tracking stopped",
+                Toast.LENGTH_LONG
+            ).show()
             Intent(applicationContext, LocationService::class.java).apply {
                 action = LocationService.ACTION_STOP
                 startService(this)
